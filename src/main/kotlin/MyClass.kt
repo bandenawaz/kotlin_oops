@@ -1,18 +1,24 @@
-class MyClass {
 
-    //data members
-    private var number: Int = 20
+interface MyInterface{
 
-    //member functions
-    fun calculateSquare(): Int {
+    fun getMesage()
+    fun getDeatils()
+}
 
-        return number * number
+class MyClass :MyInterface{
+    override fun getMesage() {
+        print("I am from my class")
+    }
+
+    override fun getDeatils() {
+        println("The deatils")
     }
 
 }
 
 fun main(){
 
-    val obj = MyClass()
-    println("${obj.calculateSquare()}")
+    val myClass = MyClass()
+    myClass.getMesage()
+    myClass.getDeatils()
 }
